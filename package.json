@@ -1,0 +1,18 @@
+{
+  "name": "eve-map-json",
+  "author": "Soullesswaffle",
+  "version": "1.0.0",
+  "description": "YO DAWG I HERD YOU LIKE JSON SO WE PUT A JSON IN UR JSON SO YOU CAN PARSE WHILE U PARSE",
+  "license": "Unlicense",
+  "homepage": "https://github.com/Soullesswaffle/eve-map-json",
+  "bugs": "https://github.com/Soullesswaffle/eve-map-json/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SoullessWaffle/eve-map-json.git"
+  },
+  "private": true,
+  "scripts": {
+    "start": "coffee transmogrify.coffee"
+  },
+  "main": "transmogrify.coffee"
+}

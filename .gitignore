@@ -1,0 +1,11 @@
+# SQLite DB conversion provided by https://www.fuzzwork.co.uk/dump/
+sqlite-latest.sqlite
+
+# Of which these three tables are exported to JSON
+mapRegions.json
+mapSolarSystemJumps.json
+mapSolarSystems.json
+
+# Using SQLiteStudio (enable the 'each row as object' option)
+sqlitestudio-2.1.5.exe
+# Which can be downloaded from http://sqlitestudio.pl/
