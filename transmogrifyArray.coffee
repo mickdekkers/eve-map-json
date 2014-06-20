@@ -14,7 +14,7 @@ for mapRegion in mapRegions
   regions[mapRegion.regionID] = mapRegion.regionName
 # Define the output object
 output = (
-  nodes: {}
+  nodes: []
   edges: []
 )
 
@@ -26,13 +26,14 @@ for node in mapSolarSystems
     # Grab the data we want
     newNode = {}
     newNode.name = node.solarSystemName
+    newNode.id = node.solarSystemID
     newNode.security = node.security
     newNode.region = regions[node.regionID]
     newNode.x = node.x
     newNode.y = node.y
     newNode.z = node.z
     # Add it to the nodes object
-    output.nodes[node.solarSystemID] = newNode
+    output.nodes.push newNode
 
 
 # Process edges
@@ -61,8 +62,7 @@ coords = (
   )
 )
 # Find highest and lowest values for each axis
-for own nodeRef of output.nodes
-  node = output.nodes[nodeRef]
+for node in output.nodes
   if node.x < coords.x.min then coords.x.min = node.x
   if node.x > coords.x.max then coords.x.max = node.x
   if node.y < coords.y.min then coords.y.min = node.y
@@ -74,8 +74,7 @@ coords.x.minAbs = Math.abs(coords.x.min)
 coords.y.minAbs = Math.abs(coords.y.min)
 coords.z.minAbs = Math.abs(coords.z.min)
 # Offset all the coordinates
-for own nodeRef of output.nodes
-  node = output.nodes[nodeRef]
+for node in output.nodes
   node.x += coords.x.minAbs
   node.y += coords.y.minAbs
   node.z += coords.z.minAbs
@@ -84,8 +83,7 @@ coords.x.max += coords.x.minAbs
 coords.y.max += coords.y.minAbs
 coords.z.max += coords.z.minAbs
 # Convert to ratio of max
-for own nodeRef of output.nodes
-  node = output.nodes[nodeRef]
+for node in output.nodes
   node.x = node.x/coords.x.max
   node.y = node.y/coords.y.max
   node.z = node.z/coords.z.max
