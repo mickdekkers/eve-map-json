@@ -1,7 +1,7 @@
 {
   "name": "eve-map-json",
   "author": "Soullesswaffle",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Generate graph data for EVE Online's solar systems (nodes) and the jumps between them (edges)",
   "license": "Unlicense",
   "homepage": "https://github.com/Soullesswaffle/eve-map-json",
