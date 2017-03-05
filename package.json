@@ -2,7 +2,7 @@
   "name": "eve-map-json",
   "author": "Soullesswaffle",
   "version": "1.0.0",
-  "description": "YO DAWG I HERD YOU LIKE JSON SO WE PUT A JSON IN UR JSON SO YOU CAN PARSE WHILE U PARSE",
+  "description": "Generate graph data for EVE Online's solar systems (nodes) and the jumps between them (edges)",
   "license": "Unlicense",
   "homepage": "https://github.com/Soullesswaffle/eve-map-json",
   "bugs": "https://github.com/Soullesswaffle/eve-map-json/issues",
@@ -12,7 +12,17 @@
   },
   "private": true,
   "scripts": {
-    "start": "coffee transmogrify.coffee"
+    "start": "node index.js"
   },
-  "main": "transmogrify.coffee"
+  "main": "index.js",
+  "dependencies": {
+    "filesize": "^3.5.5",
+    "knex": "^0.12.7",
+    "mz": "^2.6.0",
+    "node-fetch": "^1.6.3",
+    "progress-stream": "^1.2.0",
+    "ramda": "^0.23.0",
+    "sqlite3": "^3.1.8",
+    "unbzip2-stream": "^1.0.10"
+  }
 }
