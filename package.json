@@ -22,7 +22,7 @@
     "node-fetch": "^1.6.3",
     "progress-stream": "^1.2.0",
     "ramda": "^0.23.0",
-    "sqlite3": "^3.1.8",
+    "sqlite3": "^4.2.2",
     "unbzip2-stream": "^1.0.10"
   }
 }
